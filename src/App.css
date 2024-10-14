@@ -1,0 +1,165 @@
+/* Body styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #141414; /* Darker background for a more Netflix-like feel */
+  color: #f4f4f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Search Bar styling */
+.search-bar {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  background-color: #333; /* Darker search bar */
+  color: #f4f4f5;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  box-shadow: 0 0 10px #e50914; /* Red focus glow */
+}
+
+/* Dropdown styling */
+.media-type-dropdown {
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background-color: #333; /* Consistent with search bar */
+  color: #f4f4f5;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.media-type-dropdown:focus {
+  outline: none;
+  box-shadow: 0 0 10px #e50914; /* Red focus glow */
+}
+
+/* Button styling */
+button {
+  padding: 12px 20px;
+  background-color: #e50914; /* Red button color */
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f40612; /* Darker red on hover */
+}
+
+/* Movie Grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Smaller cards */
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* Movie Card styling */
+.movie-card {
+  background-color: #222; /* Darker card background */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Stronger shadow on hover */
+}
+
+.movie-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.3s ease; /* Add transition for image */
+}
+
+.movie-card img:hover {
+  transform: scale(1.1); /* Slight zoom on image hover */
+}
+
+.movie-card h3 {
+  font-size: 20px;
+  margin: 15px 10px 5px;
+  color: #e50914; /* Red title color */
+}
+
+.movie-card p {
+  font-size: 14px;
+  margin: 0 10px 15px;
+  color: #dcdcdc;
+}
+
+/* Movie Details styling */
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222; /* Darker background */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 30px;
+}
+
+.movie-details img {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.movie-details h1 {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #e50914; /* Red title color */
+}
+
+.movie-details p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #dcdcdc;
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .movie-details img {
+    width: 200px;
+    height: 300px;
+  }
+
+  .movie-details h1 {
+    font-size: 24px;
+  }
+
+  button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
